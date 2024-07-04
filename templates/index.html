@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Disease Classification</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="bg">
+        <div class="title-bar">
+            <h1>Potato Leaf Disease Classification</h1>
+        </div>
+        <div class="upload-box" id="upload-box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+            <img id="uploaded-image" src="#" alt="Uploaded Image">
+            <div class="upload-icon" id="upload-icon">⬆️</div>
+            <label for="file-input" id="upload-label">Drag and drop an image of a potato plant leaf to process</label>
+            <input type="file" id="file-input" name="file" accept="image/*" onchange="previewImage(event)">
+            <div class="spinner" id="spinner"></div>
+            <div id="result"></div>
+        </div>
+        <button class="clear-button" id="clear-button" onclick="clearImage()">Clear</button>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
